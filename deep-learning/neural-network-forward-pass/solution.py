@@ -56,14 +56,16 @@ def forward_pass(inputs: list[float], layers: list[int], act_fn: str):
         z_next = []
         a_next = []
         for j in range(fan_out):
-            # z_j = sum(W_ji * a_i) + b_j
+            # 1. Linear combination: z_j = sum(W_ji * a_i) + b_j
             z_j = sum(W[j][i] * a[i] for i in range(fan_in)) + b[j]
+            # 2. Non-linear activation: a_j = g(z_j) (ReLU for hidden, Sigmoid for output)
             a_j = activate(z_j, layer_act)
             z_next.append(z_j)
             a_next.append(a_j)
 
         layer_name = f"Layer {l_idx + 1} ({'Output' if is_output_layer else 'Hidden'})"
         trace.append((layer_name, a_next))
+        # 3. Propagate layer activations forward to serve as inputs to the next layer
         a = a_next
 
     return a, trace

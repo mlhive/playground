@@ -58,7 +58,8 @@ def train_q_learning():
 
         while not done and steps < 50:
             steps += 1
-            # Epsilon-greedy action selection
+            # 1. Epsilon-greedy policy: explore randomly with probability epsilon,
+            # otherwise exploit current knowledge by selecting best Q-value action
             if random.random() < EPSILON:
                 action = random.choice(ACTIONS)
             else:
@@ -69,9 +70,11 @@ def train_q_learning():
             next_state, reward, done = step(state, action)
             total_reward += reward
 
-            # Q-learning update
+            # 2. Bellman Optimality Q-update:
+            # TD Target = immediate reward + discounted maximum future Q-value
             max_future_q = max(Q[next_state].values()) if not done else 0.0
             td_target = reward + GAMMA * max_future_q
+            # Update Q-value towards target scaled by learning rate alpha
             Q[state][action] += ALPHA * (td_target - Q[state][action])
 
             state = next_state
