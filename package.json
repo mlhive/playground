@@ -1,0 +1,13 @@
+{
+  "name": "mlhive-playground-examples",
+  "version": "1.0.0",
+  "description": "Practical code examples for MLHive interactive playgrounds",
+  "private": true,
+  "scripts": {
+    "run:bubble-sort": "node algorithms/sorting/bubble-sort/solution.js",
+    "run:linear-search": "node algorithms/searching/linear-search/solution.js",
+    "run:linear-regression": "node machine-learning/linear-regression/solution.js",
+    "run:nms": "node computer-vision/algorithms/non-maximum-suppression/solution.js",
+    "run:forward-pass": "node deep-learning/neural-network-forward-pass/solution.js"
+  }
+}
