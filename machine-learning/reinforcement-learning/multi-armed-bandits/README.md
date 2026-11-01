@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+# Multi-Armed Bandits
+
+Epsilon-greedy action selection balances exploration and exploitation.
+
+Live visualizer: https://mlhive.com/playground/machine-learning/reinforcement-learning/multi-armed-bandits
+
+Implementations: [Python](./multi_armed_bandits.py), [JavaScript](./multi_armed_bandits.js), [C++](./multi_armed_bandits.cpp), [Rust](./multi_armed_bandits.rs), [C#](./MultiArmedBandits.cs).
+=======
 # Multi-Armed Bandit Arena Visualizer
 
 [![Interactive Visualizer](https://img.shields.io/badge/MLHive-Live_Playground-blue?style=for-the-badge)](https://mlhive.com/playground/machine-learning/reinforcement-learning/multi-armed-bandits)
@@ -41,3 +50,4 @@ Parameters matching the visualizer controls at [MLHive](https://mlhive.com/playg
 ```bash
 python solution.py
 ```
+>>>>>>> 85628891dcfbd1e4fd30e0433104bea85a5cc2f2

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+# Value & Policy Iteration
+
+Dynamic-programming planning algorithms for a known gridworld model.
+
+Live visualizer: https://mlhive.com/playground/machine-learning/reinforcement-learning/value-policy-iteration
+
+Implementations: [Python](./value_policy_iteration.py), [JavaScript](./value_policy_iteration.js), [C++](./value_policy_iteration.cpp), [Rust](./value_policy_iteration.rs), [C#](./ValuePolicyIteration.cs).
+=======
 # Value & Policy Iteration Visualizer
 
 [![Interactive Visualizer](https://img.shields.io/badge/MLHive-Live_Playground-blue?style=for-the-badge)](https://mlhive.com/playground/machine-learning/reinforcement-learning/value-policy-iteration)
@@ -46,3 +55,4 @@ Parameters matching the visualizer controls at [MLHive](https://mlhive.com/playg
 ```bash
 python solution.py
 ```
+>>>>>>> 85628891dcfbd1e4fd30e0433104bea85a5cc2f2
